@@ -31,6 +31,15 @@ user_name ← 2語以上の場合はアンダーバーで区切る。
 1user ← 先頭が数字は”NG”
 日本語もNG
 
+## 変数の予約語
+以下の名前はPythonの予約語になっているため、変数として使用できない。
+```console
+False class finally is return None continue for lambda try
+True def from nonlocal while and del global not with
+as elif if or yield assert else import pass
+break except in raise
+```
+
 ## 省略
 計算式を右のように省略して書ける。
 x  = x + 10 -> x += 10
