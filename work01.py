@@ -25,3 +25,7 @@ quotes = {
 }
 stooge = "Curly"
 print(stooge, "says:", quotes[stooge])
+
+language = 7
+print("Language %s: I am Python. What's for supper?" % language)
+print("(日本語訳：言語 7： 私がPythonです。晩御飯はなんですか？)")
