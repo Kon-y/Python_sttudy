@@ -1,29 +1,39 @@
 # <u>Python 学習Ⅰ</u>
 
 ### コマンド実行
+```python
 python3 {command}
+```
 
 ## 標準出力
 シングルクォーテーションもしくはダブルクォーテーションで囲む。
+```python
 print('表示したい文字列') or print("表示したい文字列")
+```
 
 ##コメント
 \# ← 先頭に入れる。
 
 ## 数値
 数値はクォーテーションでは囲まない。シングル(ダブル)クォーテーションで囲むと文字列になる。
+```python
 print(3) or print (3 + 7) or print(7 - 3)
+```
 
 ## その他の計算
+```python
 print(3 * 7)  3 × 7を表している。
 print(3 / 2)  3 ÷ 2を表している。
 print(7 % 3)  7 ÷ 3 = 2 余 1 ← この「余(1)を表示させる計算式」
+```
 
 ## 変数
 変数 = 値(もしくは文字列)で定義する。
 変数値を取り出す。クォーテーションで囲むと変数名が文字列として表示される。
+```python
 name = 'kon'
 print(name)      print('name') → nameと出力されてしまう。
+```
 
 ## 変数名の付け方
 date ← 英単語を用いる。
@@ -51,8 +61,10 @@ x = x % 10 -> x %= 10
 ## 文字列の連結
 print('hello ' + 'Python') -> hello Pythonと表示される。
 変数を使用した連結は・・・
+```python
 name = 'kon'
 print('hello ' + name) -> hello konと表示される。
+```
 
 ## 型変換 str
 異なる型同士の連結はできない。
@@ -85,16 +97,20 @@ print(total_price)
 ## if文
 基本形式(多分これを覚えとけばどこでも通じると思われ。)
 例：
+```python
 score = 100
 if score == 100 :　←ダブルコロンお忘れなく。
     print('大変よくできました！')
     print('次も頑張りましょう！')
+```
 
 　悪例
+```python
     if score == 100 :　←ダブルコロンお忘れなく。
         print('大変よくできました！')
     print('次も頑張りましょう！')
      └> インデントがないとif文の外とみなされるため、条件に関係なく「次も頑張りましょう！」と出力される。
+```
 
 ※比較演算子解説
 ・等しいか調べるときに使用する。
@@ -107,14 +123,20 @@ if score == 100 :　←ダブルコロンお忘れなく。
 　>= → 右辺の方が小さい又は等しいときTrue
 
 ## 真偽値
+```python
 score = 100
 if score == 100 :
     print('よくできました！')
+```
+
 結果：よくできました！と出力される。
     ↓
 
+```python
 score = 100
-print(score == 100)　　　　　print(score == 50)
+print(score == 100)　　  print(score == 50)
+```
+
 結果：Trueと出力される。      Falseと出力される。
 
 True or False ← 真偽値
@@ -122,11 +144,13 @@ True or False ← 真偽値
 ## 条件に合致しない時の処理
 条件式に合致しない場合の処理を含める場合はelseを使う。
 例：
+```python
 score = 50
 if score == 100 :
     print('よくできました！')　←　条件式がTrueの場合に出力される。
 else : ←「:」お忘れなく。
     print('頑張りましょう')　　←　条件式がFalseの場合に出力される。
+```
 
 ## 条件式を組み合わせよう(and編)
 2つの条件を組み合わせた式を作る。
@@ -135,9 +159,11 @@ True and False -> False
 False and True -> True
 False and Flase -> False
 例：
+```python
 time = 14
 if time > 10 and time < 18 :　←　timeが10より大きく、18より小さければ
     print('就業時間です。')　←　「就業時間です」と表示させる。
+```
 
 ## 条件式を組み合わせよう(or編)
 片方のみTrueが成立するような条件式を作る。
@@ -171,7 +197,7 @@ print('支払い金額は' + str(total_price) + '円です')
 ```
 
 ## 条件分岐
-Bashに似ている。
+pythonに似ている。
 ```python
 if <条件> :
     処理
@@ -291,13 +317,13 @@ def 関数名(): ← 行末にコロンをお忘れなく
     実行する処理
 ↑↑↑↑ ← インデントを4つ開ける。
 例：
-```bash
+```python
 def hello():
     print('Hello World')
 ```
 
 ## 関数の使い方
-```bash
+```python
 def hello():
     print('Hello World')
 
@@ -325,20 +351,23 @@ class MenuItem: ← 行末にコロンはお忘れなく
 　　　 ↑ クラス名は大文字から始める。
 
 例：
-```bash
+```python
 class Person():
-    def __init__(self);  <- __init__を定義するときの第一引数はselfでなければならない。
-        pass
-
+    def __init__(self, name);  <- __init__を定義するときの第一引数はselfでなければならない。
+        self.name = name
+hunter = person('Elmer Fudd')
+print('The mighty hunter: ', hunter.name)
+```
+→ [The mighty hunter:  Elmer Fudd]と出力される。
 
 ## クラスの中身
 「class MenuItem:」より後の行で、インデントをして書く。
-```bash
+```python
 class MenuItem:
     # 実行したい処理を書く
 ```
 例：
-```bash
+```python
 class MenuItem:
     pass
      └> 処理がなにもないことを表す。
@@ -348,10 +377,32 @@ class MenuItem:
 クラス名()」とそのクラスを呼び出すことで、クラス（設計図）を用いて新しくインスタンスを生成することができる。
 また、「変数名 = クラス名()」とすることで、生成したインスタンスを変数に代入することができる。
 例：
+```python
 class MenuItem:
     pass
-
 menu_item1 = MenuItem() ← MenuItemからインスタンスを生成
 　↪ 変数に代入する。
+```
 
 ## クラスの継承
+使いたい既存のクラスを指定し、追加・変更したい一部だけを定義する新しいクラスを作る。
+例：Carという空クラスを定義し、YugoというCarのサブクラスを定義する。
+
+```python
+class Car():
+    def exclaim(self):
+        print(I'm a Car!")
+
+class Yugo(Car):
+    pass
+```
+
+　　続いてそれぞれのクラスからオブジェクトを作る。
+```python
+give_me_a_car = Car()       -> 何も表示されない。
+give_me_a_yugo = Yugo()     -> 何も表示されない。
+give_me_a_car.exclaim()     -> I'm a Car!と表示される。
+give_me_a_yugo.exclaim()    -> I'm a Car!と表示される。
+```
+
+## メソッドのオーバーライド
