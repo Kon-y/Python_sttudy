@@ -291,15 +291,18 @@ def 関数名(): ← 行末にコロンをお忘れなく
     実行する処理
 ↑↑↑↑ ← インデントを4つ開ける。
 例：
+```bash
 def hello():
     print('Hello World')
+```
 
 ## 関数の使い方
+```bash
 def hello():
     print('Hello World')
 
 hello() ← 関数の呼び出し
-
+```
 ---
 
 # <u>Python 学習Ⅳ</u>
@@ -320,6 +323,13 @@ Pythonに含まれるものは、数値からモジュールに至るまです�
 ## クラスの定義
 class MenuItem: ← 行末にコロンはお忘れなく
 　　　 ↑ クラス名は大文字から始める。
+
+例：
+```bash
+class Person():
+    def __init__(self);  <- __init__を定義するときの第一引数はselfでなければならない。
+        pass
+
 
 ## クラスの中身
 「class MenuItem:」より後の行で、インデントをして書く。
