@@ -470,7 +470,7 @@ class Yugo(Car):
     pass
 ```
 
-　　続いてそれぞれのクラスからオブジェクトを作る。
+続いてそれぞれのクラスからオブジェクトを作る。
 
 ```python
 give_me_a_car = Car()       -> 何も表示されない。
@@ -480,3 +480,46 @@ give_me_a_yugo.exclaim()    -> I'm a Car!と表示される。
 ```
 
 ## メソッドのオーバーライド
+
+親クラスのメソッドを上書き(オーバーライド)する方法
+
+```bash
+class Car():
+    def exclaim(self):
+        print("I'm a Car!")
+
+class Yugo(Car)
+    def exclaim(self):
+        print(I'm a Yugo[; Much like a Car, but more Yugo-ish.")
+
+give_me_a_car = Car()
+give_me_a_yugo = Yugo()
+```
+
+上記でオーバーライドしたのはexclaim()メソッドだが、
+__init__()を含むあらゆるメソッドをオーバーライドできる。
+
+```bash
+class Person():
+    def __init__(self, name):
+        self.name = name
+
+class MDPerson(Person):
+    def __init__(self, name):
+        self.name = "Doctor " + name
+
+class JDPerson(Person):
+    def __init__(self, name):
+        self.name = name + ", Esquire"
+```
+
+person = Person('Fudd')
+doctor = MDPerson('Fudd')
+lawyer = JDPerson('Fudd')
+print(person.name)
+Fudd
+print(doctor.name)
+Doctor Fudd
+print(lawyer.name)
+
+↑ これの説明文を入れる。(P161)
