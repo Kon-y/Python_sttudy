@@ -92,3 +92,12 @@ lawyer = JDPerson('Fudd')
 print(person.name)
 print(doctor.name)
 print(lawyer.name)
+
+print("")
+print("## これでもいける？親classを継承しなくても単体でnameを変えられるかどうか検証")
+
+class MDPerson():
+    def __init__(self, name):
+        self.name = "Doctor " + name
+doctor = MDPerson('Fudd')
+print(doctor.name)
