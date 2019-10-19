@@ -511,15 +511,16 @@ class MDPerson(Person):
 class JDPerson(Person):
     def __init__(self, name):
         self.name = name + ", Esquire"
-```
-
 person = Person('Fudd')
 doctor = MDPerson('Fudd')
 lawyer = JDPerson('Fudd')
 print(person.name)
-Fudd
 print(doctor.name)
-Doctor Fudd
 print(lawyer.name)
+```
 
-↑ これの説明文を入れる。(P161)
+親のPersonクラスと同じ引数を取ってオブジェクトに格納されるnameの値を変えている。
+
+## メソッドの追加
+
+子Classは、親Classになかったメソッドを追加することができる。

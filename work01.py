@@ -99,5 +99,6 @@ print("## これでもいける？親classを継承しなくても単体でname�
 class MDPerson():
     def __init__(self, name):
         self.name = "Doctor " + name
+        
 doctor = MDPerson('Fudd')
 print(doctor.name)
