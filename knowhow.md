@@ -530,3 +530,17 @@ print(lawyer.name)
 ## 第5章
 
 ## Pyの化粧箱：モジュール、パッケージ、プログラム
+
+いままでのPythonの対話型インタプリンタの中で以下のようなコードの断片を書いて実行していた。
+
+```bash
+print("This interactive snippet works.")
+This interactive snippet works.
+```
+
+### import sys
+
+```bash
+import sys
+print('Program arguments:', sys.argv)
+```

@@ -102,3 +102,9 @@ class MDPerson():
         
 doctor = MDPerson('Fudd')
 print(doctor.name)
+
+print()
+print("## import sysモジュールを使ってみる")
+
+import sys
+print('Program arguments:', sys.argv)
