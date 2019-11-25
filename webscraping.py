@@ -18,6 +18,7 @@ print (nik_cal+'は' ,nikkei, '円です')
 print ('ダウ平均株価は', dau, '円です')
 print ('為替ドルは', kawase,'円です')
 
+#
 a=open('shares.csv','w')
 a.write('日時,日経平均株価,ダウ平均株価,為替ドル\n')
 a.write(date+','+nikkei+','+dau+','+kawase+'\n')
